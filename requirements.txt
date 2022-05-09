@@ -1,0 +1,5 @@
+paddlepaddle-gpu>=2.2.2
+paddlespeech==0.2.0
+visualdl
+munch
+pydub
