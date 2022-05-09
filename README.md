@@ -1,3 +1,9 @@
+# StarGANv2-VC-Paddle
+
+A paddlepaddle version of [StarGANv2-VC](https://github.com/yl4579/StarGANv2-VC).
+
+Download pretrained models [here](https://aistudio.baidu.com/aistudio/datasetdetail/145012).
+
 # StarGANv2-VC: A Diverse, Unsupervised, Non-parallel Framework for Natural-Sounding Voice Conversion
 
 ### Yinghao Aaron Li, Ali Zare, Nima Mesgarani
