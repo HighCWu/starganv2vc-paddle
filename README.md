@@ -1,8 +1,31 @@
+---
+title: StarGANv2 Voice Conversion on PaddlePaddle
+emoji: 🗣️
+colorFrom: green
+colorTo: blue
+sdk: gradio
+sdk_version: 2.9.4
+app_file: app.py
+pinned: false
+license: mit
+---
+
 # StarGANv2-VC-Paddle
+[![Baidu AI Studio](https://img.shields.io/static/v1?label=Baidu&message=AI%20Studio%20Free%20A100&color=blue)](https://aistudio.baidu.com/aistudio/projectdetail/3955253)
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/HighCWu/starganv2vc-paddle)
 
 A paddlepaddle version of [StarGANv2-VC](https://github.com/yl4579/StarGANv2-VC).
 
 Download pretrained models [here](https://aistudio.baidu.com/aistudio/datasetdetail/145012).
+
+Getting started with free v100/a100 in [AI Studio](https://aistudio.baidu.com/aistudio/projectdetail/3955253) or fast try with [HugginFace Spaces](https://huggingface.co/spaces/HighCWu/starganv2vc-paddle).
+
+---
+
+Original PyTorch Repo [README](https://github.com/yl4579/StarGANv2-VC) 👇
+
+---
+
 
 # StarGANv2-VC: A Diverse, Unsupervised, Non-parallel Framework for Natural-Sounding Voice Conversion
 
