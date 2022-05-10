@@ -4,15 +4,20 @@ os.system("pip install gradio==2.9b24")
 import gradio as gr
 
 
-models_url = 'https://bj.bcebos.com/v1/ai-studio-online/6c081f29caad483ebd4cded087ee6ddbfc8dca8fb89d4ab69d44253ce5525e32?/Models.zip'
 vocoder_url = 'https://bj.bcebos.com/v1/ai-studio-online/e46d52315a504f1fa520528582a8422b6fa7006463844b84b8a2c3d21cc314db?/Vocoder.zip'
+models_url = 'https://bj.bcebos.com/v1/ai-studio-online/6c081f29caad483ebd4cded087ee6ddbfc8dca8fb89d4ab69d44253ce5525e32?/Models.zip'
 
-import requests, zipfile, StringIO
+from io import BytesIO
+from zipfile import ZipFile
+from urllib.request import urlopen
 
-for url in [models_url, vocoder_url]:
-    r = requests.get(url, stream=True)
-    z = zipfile.ZipFile(StringIO.StringIO(r.content))
-    z.extractall()
+
+if not (os.path.isdir('Vocoder') and os.path.isdir('Models')):
+    for url in [vocoder_url, models_url]:
+        resp = urlopen(url)
+        zipfile = ZipFile(BytesIO(resp.read()))
+        zipfile.extractall()
+
 
 import random
 import yaml
@@ -124,7 +129,7 @@ def app(wav_path, speaker_id):
     audio = audio / np.max(np.abs(audio))
     audio.dtype = np.float32
     source = preprocess(audio)
-    ref = reference_embeddings[speaker_id]
+    ref = reference_embeddings[speaker_id][0]
 
     with paddle.no_grad():
         f0_feat = F0_model.get_feature_GAN(source.unsqueeze(1))
