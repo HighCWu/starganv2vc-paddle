@@ -16,7 +16,7 @@ license: mit
 
 A paddlepaddle version of [StarGANv2-VC](https://github.com/yl4579/StarGANv2-VC).
 
-Download pretrained models [here](https://aistudio.baidu.com/aistudio/datasetdetail/145012).
+Download pretrained models [here](https://aistudio.baidu.com/aistudio/datasetdetail/145012) or in [Huggingface](https://huggingface.co/HighCWu/starganv2vc-paddle).
 
 Getting started with free v100/a100 in [AI Studio](https://aistudio.baidu.com/aistudio/projectdetail/3955253) or fast try with [HugginFace Spaces](https://huggingface.co/spaces/HighCWu/starganv2vc-paddle).
 
